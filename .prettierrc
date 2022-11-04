@@ -2,5 +2,6 @@
   "tabWidth": 2,
   "useTabs": false,
   "jsxSingleQuote": false,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "printWidth": 80
 }
