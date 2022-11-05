@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('test') {
+    stage('Build') {
       steps {
-        sh 'ls -la'
+        sh 'docker build -f Dockerfile .'
       }
     }
 
