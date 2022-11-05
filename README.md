@@ -1,22 +1,22 @@
-Welcome to the WCHS CS Club's website's GitHub repo!
-
-## Setting up a dev environment
-
-If you already have a dev environment for Node.js and have Git installed and
-setup, you can skip to [Getting Started](##Getting-Started)
+Welcome to the WCHS CS Club's website's GitHub repo! Inportant information regarding how to set up a development environment and how to contribute to the website is outlined below.
 
 It is recommended that you set up a local development environment on your own
 computer so that you can work on your own projects. **To do so, you will need
 administrative permissions on your computer. **
 
-While this guide is intended to make the process as smooth as possible, this
-process may require a large amount of troubleshooting. If you run into issues or
-are confused by anything, feel free to contact any of the execs for help!
+While this guide is intended to make the process of setting up a development
+environment as smooth as possible, this process may require a large amount of
+troubleshooting. If you run into issues or are confused by anything, feel free
+to contact any of the execs for help!
 
 If you do not have your own computer or unable to set up development
 environment, there are a number of online code editors that you can use. Some
 commonly used ones are [Code Sandbox](https://codesandbox.io/) and
 [Replit](https://replit.com/).
+
+## Installing Node.js, Git, and VSCode
+
+If you already have Node.js, Git, and VSCode installed on your machine, you can skip to [Getting Started](#Getting-Started).
 
 ### Instructions for Windows
 
@@ -93,14 +93,11 @@ you can personalize your own machine to your own tastes.
 
 You can find lots of useful information at the [official documentation](https://code.visualstudio.com/docs).
 
-### The Git Workflow
+### Setting Up Git
 
-Now that you've got your editor set up, you can finally start developing! You
-can start familiarizing yourself with the project by looking at the project's
-files.
-
-First, ensure that your git name and email are configured. Do `git config --list` check.
-You should see output like this:
+To set up git, you will need to configure your name and email variables for git.
+To check your current variables, do `git config --list`. At the end, we want to
+have a configuration like the following:
 
 ```
 user.name=Ezra Huang
@@ -108,22 +105,31 @@ user.email=ezrahuang155@gmail.com
 init.defaultbranch=main
 ```
 
-If you don't see your name and email, run the following commands:
+To add your name and email, run the following commands:
 
 ```
 git config --global user.name "<full name>"
 git config --global user.email "<email>"
 ```
 
-For example,
-
-```
-git config --global user.name "Ezra Huang"
-git config --global user.email "ezrahuang155@gmail.com"
-```
-
 Finally, re-run `git config --list` to verify that your changes have been
 applied.
+
+### The Git Workflow
+
+Now that you've got your editor set up, you can finally start developing! You
+can start familiarizing yourself with the project by looking at the project's
+files.
+
+First, ensure that your git name and email are configured. When running `git config --list`, you should see output like this:
+
+```
+user.name=Ezra Huang
+user.email=ezrahuang155@gmail.com
+init.defaultbranch=main
+```
+
+If not, go to [Setting Up Git](#Setting-Up-Git)
 
 To start editing, create a branch by running the command: `git branch <branch>`.
 For example, `git branch ezras-branch`.
