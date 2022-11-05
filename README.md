@@ -7,10 +7,16 @@ setup, you can skip to [Getting Started](##Getting-Started)
 
 It is recommended that you set up a local development environment on your own
 computer so that you can work on your own projects. **To do so, you will need
-administrative permissions on your computer. ** If you do not have your own
-computer or unable to set up development environment, there are a number of
-online code editors that you can use. Some commonly used ones are [Code
-Sandbox](https://codesandbox.io/) and [Replit](https://replit.com/)
+administrative permissions on your computer. **
+
+While this guide is intended to make the process as smooth as possible, this
+process may require a large amount of troubleshooting. If you run into issues or
+are confused by anything, feel free to contact any of the execs for help!
+
+If you do not have your own computer or unable to set up development
+environment, there are a number of online code editors that you can use. Some
+commonly used ones are [Code Sandbox](https://codesandbox.io/) and
+[Replit](https://replit.com/).
 
 ### Instructions for Windows
 
@@ -52,7 +58,7 @@ Next, navigate to a directory where you want to work on the project. Use the
 
 Next, run the command:
 
-TODO `git clone https://github.com/EzraH442/cs-club-website`
+`git clone https://github.com/EzraH442/cs-club-website`
 
 Then, try running the command `yarn dev`. If you are on a Macbook, this will
 probably work fine. However, on Windows, you will likely running into an error
@@ -85,8 +91,74 @@ Feel free to customize your dev environment however you want! The
 `settings.json` file and the extentions you decide to use is where
 you can personalize your own machine to your own tastes.
 
-You can find lots of useful information at the [official documentation](https://code.visualstudio.com/docs)
+You can find lots of useful information at the [official documentation](https://code.visualstudio.com/docs).
 
 ### The Git Workflow
 
-TODO
+Now that you've got your editor set up, you can finally start developing! You
+can start familiarizing yourself with the project by looking at the project's
+files.
+
+First, ensure that your git name and email are configured. Do `git config --list` check.
+You should see output like this:
+
+```
+user.name=Ezra Huang
+user.email=ezrahuang155@gmail.com
+init.defaultbranch=main
+```
+
+If you don't see your name and email, run the following commands:
+
+```
+git config --global user.name "<full name>"
+git config --global user.email "<email>"
+```
+
+For example,
+
+```
+git config --global user.name "Ezra Huang"
+git config --global user.email "ezrahuang155@gmail.com"
+```
+
+Finally, re-run `git config --list` to verify that your changes have been
+applied.
+
+To start editing, create a branch by running the command: `git branch <branch>`.
+For example, `git branch ezras-branch`.
+
+Then, you can checkout the branch by running the command: `git checkout <branch>`. For example, `git checkout ezras-branch`.
+
+To check which branch you are currently on, you can use the `git status` command. At the top, you will get output like:
+
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+```
+
+When you are done working on some files, use the git add command: `git add <files to add>`. For example, `git add ./pages/home.tsx`. To quickly add all
+files, you can use the command `git add .`
+
+To review what files have been added, use the `git status` command. The relavant part is the following:
+
+```
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+```
+
+To un-add files, use the git restore command: `git restore --staged <file>`.
+
+After adding files, you can commit your changes with the git commit command:
+`git commit -m "<commit message>"`. For example. `git commit -m "fix bugs"`
+
+Finally, when you are ready to push your changes to GitHub, do `git push origin <branch>`. Then, go to the [github repo](https://github.com/EzraH442/cs-club-website) and make a pull request following the instructions [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=webui). Request a review from one or more of the execs and if all looks good, we'll approve it and merge it into the main branch.
+
+Periodically, you should also be running `git fetch` and `git pull` to make sure your local copy of code is up to date with the remote code.
+
+**For a full list of git commands and options, checkout the [official
+documentation](https://git-scm.com/docs)**
+
+Many of these routine tasks are integrated into VSCode. More information
+[here](https://code.visualstudio.com/docs/sourcecontrol/overview)
